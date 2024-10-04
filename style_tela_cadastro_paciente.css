@@ -1,3 +1,14 @@
 #corBackground{
     background-color: #c6c6c6;
 }
+
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@media screen and (max-width:690px){
+    #card{
+        margin-right: 50px;
+        margin-left: 50px;
+    }
+}
