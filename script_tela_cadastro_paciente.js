@@ -23,6 +23,8 @@ function validaCampos() {
 
     verificaCPF(cpf, inputCPF);
 
+    verificaSenha(senha, inputPassword);
+
     if (camposValidos) {
         redirecionaPagina("https://github.com/mateusferrao/TIAW_Gestao-de-Consultorio-Psicologico");
     }
@@ -49,6 +51,17 @@ function verificaCPF(cpf, inputCPF){
         camposValidos = false;
         inputCPF.value = '';
         inputCPF.placeholder = 'CPF inválido';
+    }
+}
+
+function verificaSenha(senha, inputPassword){
+    if (senha.length >= 8){
+        deixaCampoVerde(inputPassword);
+        inputPassword.value = 'Senha';
+    }else{
+        deixaCampoVermelho(inputPassword);
+        camposValidos = false;
+        inputPassword.value = '';
     }
 }
 
