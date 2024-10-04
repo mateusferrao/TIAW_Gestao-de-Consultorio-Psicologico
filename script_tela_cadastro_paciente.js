@@ -1,4 +1,5 @@
 function validaCampos() {
+
     let inputName = document.getElementById("inputName");
     let nome = inputName.value;
 
@@ -11,46 +12,40 @@ function validaCampos() {
     let inputPassword = document.getElementById("inputPassword");
     let senha = inputPassword.value;
 
-    redirecionaPagina(nome,cpf,email,senha);
+    let camposValidos = true;
 
-    if (nome == '') {
-        campoVermelho(inputName);
-    } else {
-        campoVerde(inputName);
+    let listaCampos = [[nome, inputName], [cpf, inputCPF], [email, inputEmail], [senha, inputPassword]];
+
+    for (let i = 0; i < listaCampos.length; i++) {
+        if (listaCampos[i][0] == '') {
+            deixaCampoVermelho(listaCampos[i][1]);
+            camposValidos = false;
+        } else {
+            deixaCampoVerde(listaCampos[i][1]);
+        }
     }
 
-    if (cpf == '') {
-        campoVermelho(inputCPF);
-    } else {
-        campoVerde(inputCPF);
-    }
-
-    if (email == '') {
-        campoVermelho(inputEmail);
-    } else {
-        campoVerde(inputEmail);
-    }
-
-    if (senha == '') {
-        campoVermelho(inputPassword);
-    } else {
-        campoVerde(inputPassword);
+    if (camposValidos) {
+        redirecionaPagina();
     }
 
 }
 
-function redirecionaPagina(nome,cpf,email,senha){
-    if(nome != '' && cpf != '' && email != '' && senha != ''){
-        window.location.href = "https://github.com/mateusferrao/TIAW_Gestao-de-Consultorio-Psicologico";
-    }
+function redirecionaPagina() {
+    window.location.href = "https://github.com/mateusferrao/TIAW_Gestao-de-Consultorio-Psicologico";
 }
 
-function campoVermelho(inputCampo){
+function deixaCampoVermelho(inputCampo) {
     inputCampo.classList.remove('border-success');
+    inputCampo.classList.remove('border');
     inputCampo.classList.add('border-danger');
+    inputCampo.classList.add('border-2');
 }
 
-function campoVerde(inputCampo){
+function deixaCampoVerde(inputCampo) {
     inputCampo.classList.remove('border-danger');
+    inputCampo.classList.remove('border-2');
     inputCampo.classList.add('border-success');
+    inputCampo.classList.add('border');
+
 }
