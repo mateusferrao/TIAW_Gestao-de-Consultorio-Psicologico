@@ -28,19 +28,25 @@
             <form>
                 <div class="row mb-3">
                     <div class="col-sm-10 m-auto">
-                        <input type="name" placeholder="Nome Completo"
+                        <input type="text" placeholder="Nome completo"
                             class="form-control form-control-lg border border-success" id="inputName">
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-sm-10 m-auto">
-                        <input type="cpf" placeholder="CPF" class="form-control form-control-lg border border-success"
+                        <input type="number" placeholder="CPF" class="form-control form-control-lg border border-success" min="00000000000" max="99999999999"
                             id="inputCPF">
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-sm-10 m-auto">
-                        <input type="email" placeholder="E-mail"
+                        <input type="text" placeholder="Data de nascimento" onfocus="this.type='date'"
+                            class="form-control form-control-lg border border-success" id="inputNascimento">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-sm-10 m-auto">
+                        <input type="text" placeholder="E-mail"
                             class="form-control form-control-lg border border-success" id="inputEmail">
                     </div>
                 </div>
