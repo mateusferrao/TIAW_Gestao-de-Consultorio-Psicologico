@@ -1,0 +1,11 @@
+{
+    "usuarios":[
+        {
+            "nome" : "Mateus Ferrão da Costa",
+            "dataNascimento" : "03/01/2004",
+            "email" : "mateusferraocosta2000@gmail.com",
+            "cpf" : "16035080669",
+            "senha" : "ferrao123"
+        }
+    ]
+}

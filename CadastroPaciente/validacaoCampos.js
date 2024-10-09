@@ -1,3 +1,4 @@
+
 let camposValidos = true;
 
 function validaCampos() {
@@ -83,5 +84,3 @@ function deixaCampoVerde(inputCampo) {
     inputCampo.classList.add('border');
 
 }
-
-
