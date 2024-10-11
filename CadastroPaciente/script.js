@@ -28,7 +28,7 @@ function validaCampos() {
 
     if (camposValidos) {
         cadastraUsuario(nome, dataNascimento, email, cpf, senha);
-        //redirecionaPagina("https://github.com/mateusferrao/TIAW_Gestao-de-Consultorio-Psicologico");
+        redirecionaPagina("./index_tela_sessao.html");
     }
 
 }
