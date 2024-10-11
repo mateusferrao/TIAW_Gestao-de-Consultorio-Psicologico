@@ -1,1 +1,1 @@
-import data from './usuarios.json';
+import data from './usuarios.json' assert {type: 'json'};
