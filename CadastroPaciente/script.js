@@ -28,7 +28,7 @@ function validaCampos() {
 
     if (camposValidos) {
         cadastraUsuario(nome, dataNascimento, email, cpf, senha);
-        redirecionaPagina("./index_tela_sessao.html");
+        redirecionaPagina("#");
     }
 
 }
