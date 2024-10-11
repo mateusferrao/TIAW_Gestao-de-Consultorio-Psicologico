@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/img/favicon.png" />
     <link rel="stylesheet" href="style_tela_cadastro_paciente.css">
     <script src="validacaoCampos.js"></script>
-    <script type="module" src="cadastro.js"></script>
+    <script src="cadastro.js"></script>
     <title>Cadastro</title>
 </head>
 
@@ -41,8 +41,9 @@
                 </div>
                 <div class="row mb-3">
                     <div class="col-sm-10 m-auto">
-                        <input type="number" placeholder="CPF" class="form-control form-control-lg border border-success" min="00000000000" max="99999999999"
-                            id="inputCPF">
+                        <input type="number" placeholder="CPF"
+                            class="form-control form-control-lg border border-success" min="00000000000"
+                            max="99999999999" id="inputCPF">
                     </div>
                 </div>
                 <div class="row mb-3">
@@ -58,11 +59,30 @@
                     </div>
                 </div>
                 <div class="col-sm-10 m-auto">
-                    <button type="button" onclick="validaCampos()" class="btn btn-lg btn-success w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <button type="button" onclick="validaCampos()" class="btn btn-lg btn-success w-100"
+                        data-bs-toggle="modal" data-bs-target="#exampleModal">
                         Cadastrar
                     </button>
                 </div>
             </form>
+        </div>
+    </div>
+
+    <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-success" id="confirmationModalLabel">Confirmação</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-success">
+                    Usuário cadastrado com sucesso!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
         </div>
     </div>
 

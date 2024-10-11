@@ -1,24 +1,24 @@
-
 let camposValidos = true;
 
 function validaCampos() {
+    camposValidos = true;
 
-    let inputName = document.getElementById("inputName");
-    let nome = inputName.value;
+    var inputName = document.getElementById("inputName");
+    var nome = inputName.value;
 
-    let inputCPF = document.getElementById("inputCPF");
-    let cpf = inputCPF.value;
+    var inputCPF = document.getElementById("inputCPF");
+    var cpf = inputCPF.value;
 
-    let inputEmail = document.getElementById("inputEmail");
-    let email = inputEmail.value;
+    var inputEmail = document.getElementById("inputEmail");
+    var email = inputEmail.value;
 
-    let inputPassword = document.getElementById("inputPassword");
-    let senha = inputPassword.value;
+    var inputPassword = document.getElementById("inputPassword");
+    var senha = inputPassword.value;
 
-    let inputNascimento = document.getElementById("inputNascimento");
-    let dataNascimento = inputNascimento.value;
+    var inputNascimento = document.getElementById("inputNascimento");
+    var dataNascimento = inputNascimento.value;
 
-    let listaCampos = [[nome, inputName], [cpf, inputCPF], [email, inputEmail], [senha, inputPassword],[dataNascimento,inputNascimento]];
+    var listaCampos = [[nome, inputName], [cpf, inputCPF], [email, inputEmail], [senha, inputPassword],[dataNascimento,inputNascimento]];
 
     verificaCamposNulos(listaCampos);
 
@@ -27,7 +27,8 @@ function validaCampos() {
     verificaSenha(senha, inputPassword);
 
     if (camposValidos) {
-        redirecionaPagina("https://github.com/mateusferrao/TIAW_Gestao-de-Consultorio-Psicologico");
+        cadastraUsuario(nome, dataNascimento, email, cpf, senha);
+        //redirecionaPagina("https://github.com/mateusferrao/TIAW_Gestao-de-Consultorio-Psicologico");
     }
 
 }
@@ -83,4 +84,17 @@ function deixaCampoVerde(inputCampo) {
     inputCampo.classList.add('border-success');
     inputCampo.classList.add('border');
 
+}
+
+function cadastraUsuario(nome, dataNascimento, email, cpf, senha) {
+    let usuarios = JSON.parse(localStorage.getItem('usuarios')) || { usuarios: [] };
+    
+    usuarios.usuarios.push({ nome, dataNascimento, email, cpf, senha });
+    localStorage.setItem('usuarios', JSON.stringify(usuarios));
+
+    let modal = new bootstrap.Modal(document.getElementById('confirmationModal'));
+    modal.show();
+
+    let usuario1 = JSON.parse(localStorage.getItem('usuarios'))
+    alert(usuario1.usuarios[7].senha)
 }
