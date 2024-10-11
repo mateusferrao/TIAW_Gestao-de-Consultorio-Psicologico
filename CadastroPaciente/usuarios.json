@@ -5,7 +5,14 @@
             "dataNascimento" : "03/01/2004",
             "email" : "mateusferraocosta2000@gmail.com",
             "cpf" : "16035080669",
-            "senha" : "ferrao123"
+            "senha" : "mateus123"
+        },
+        {
+            "nome" : "Cláudio Adriano da Silva",
+            "dataNascimento" : "04/03/2001",
+            "email" : "claudio@gmail.com",
+            "cpf" : "99999999999",
+            "senha" : "claudio123"
         }
     ]
 }
