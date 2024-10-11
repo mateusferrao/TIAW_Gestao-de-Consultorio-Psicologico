@@ -94,7 +94,4 @@ function cadastraUsuario(nome, dataNascimento, email, cpf, senha) {
 
     let modal = new bootstrap.Modal(document.getElementById('confirmationModal'));
     modal.show();
-
-    let usuario1 = JSON.parse(localStorage.getItem('usuarios'))
-    alert(usuario1.usuarios[7].senha)
 }
