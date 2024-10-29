@@ -137,7 +137,6 @@ function deixaCampoVerde(inputCampo) {
 }
 
 function cadastraUsuario(dataNascimento, email, cpf, nome) {
-
     
     let objDados = leDados();
     
